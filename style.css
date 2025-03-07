@@ -1,68 +1,123 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    color: #01579b;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #01579b;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #0288d1;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0277bd;
+}
+
+#paymentRecord {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+#paymentRecord th, #paymentRecord td {
+  border: 1px solid #bdbdbd;
+  padding: 8px;
+}
+
+#paymentRecord th {
+  background-color: #0288d1;
+  color: #ffffff;
+}
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 768px) {
+  /* En pantallas más pequeñas (como tablets), hacer que los ítems del menú se apilen */
   .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  /* Hacer que los ítems tengan un ancho mayor en pantallas pequeñas */
   .item {
-    background: #ffffff;
-    border: 1px solid #bdbdbd;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    width: 150px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .item:hover {
-    transform: scale(1.05);
-  }
-  
-  img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  button {
-    background-color: #0288d1;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  button:hover {
-    background-color: #0277bd;
-  }
-  
-  #paymentRecord {
     width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
+    margin: 10px 0;
   }
-  
+
+  /* Ajustar el ancho de la tabla en pantallas más pequeñas */
+  #paymentRecord {
+    width: 95%;
+  }
+
+  /* Ajustar el tamaño de los textos y botones */
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* En pantallas muy pequeñas (como móviles), ajustar el tamaño del título */
+  h1 {
+    font-size: 1.2em;
+  }
+
+  /* Asegurar que los ítems sean más grandes y cómodos de tocar */
+  .item {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* Hacer los botones de un tamaño apropiado en móviles */
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  /* Ajustar la tabla en dispositivos muy pequeños */
   #paymentRecord th, #paymentRecord td {
-    border: 1px solid #bdbdbd;
-    padding: 8px;
+    font-size: 12px;
+    padding: 6px;
   }
-  
-  #paymentRecord th {
-    background-color: #0288d1;
-    color: #ffffff;
-  }
-  
+}
