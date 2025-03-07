@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Cuartel General</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Cafetería del Cuartel General de la Armada</h1>
+  
+  <div class="menu">
+    <div class="item" onclick="addItem('Café/Cola Cao', 1)">Café/Cola Cao - 1€</div>
+    <div class="item" onclick="addItem('Zumo', 1.5)">Zumo - 1,50€</div>
+    <div class="item" onclick="addItem('Croissant Especial', 1.5)">Croissant Especial - 1,50€</div>
+    <div class="item" onclick="addItem('Pincho Solo', 1.5)">Pincho Solo - 1,50€</div>
+    <div class="item" onclick="addItem('Café + Media', 1.5)">Café + Media - 1,50€</div>
+    <div class="item" onclick="addItem('Café + Entera', 1.7)">Café + Entera - 1,70€</div>
+    <div class="item" onclick="addItem('Café + Media + Jamón', 2)">Café + Media + Jamón - 2€</div>
+    <div class="item" onclick="addItem('Café + Pincho', 2.5)">Café + Pincho - 2,50€</div>
+    <div class="item" onclick="addItem('Café + Pincho + Zumo', 4)">Café + Pincho + Zumo - 4€</div>
+  </div>
+
+  <div class="selected-items">
+    <h2>Pedido Actual</h2>
+    <ul id="orderList"></ul>
+  </div>
+
+  <label for="payer">¿Quién paga?</label>
+  <select id="payer">
+    <option value="Gabriel">Gabriel</option>
+    <option value="Noelia">Noelia</option>
+    <option value="David">David</option>
+    <option value="Mario">Mario</option>
+    <option value="Marcos">Marcos</option>
+  </select>
+
+  <label for="day">Día de la Semana:</label>
+  <input type="text" id="day" placeholder="Lunes, Martes...">
+
+  <button onclick="calculateTotal()">Calcular Total</button>
+
+  <table id="paymentRecord">
+    <tr>
+      <th>Día</th>
+      <th>Pagador</th>
+      <th>Total Pagado</th>
+    </tr>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
